@@ -4,7 +4,7 @@ title:  Santa
 date:   2020-11-16
 title: Scheduling
 categories: post
-research: true
+research: false
 ---
 
 So far, my work in scheduling has been in designing approximation algorithms for 
