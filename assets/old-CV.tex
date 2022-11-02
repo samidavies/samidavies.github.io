@@ -1,0 +1,500 @@
+\documentclass[12 pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\textheight=10in
+\pagestyle{empty}
+%\raggedbottom
+\raggedright
+
+%  \renewcommand{\encodingdefault}{cg}
+  %\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+\newcommand{\area}[2]{\vspace*{-9pt} \begin{verse}\textbf{#1}   #2 \end{verse}  }
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \selectfont{\textsc{#1}}} \vspace*{-6pt} \lineunder}
+\newcommand{\employer}[3]{{ \textbf{#1} \hfill #2 \\ #3\\  }}
+\newcommand{\employerss}[3]{{ \textbf{#1} \hfill (#2)\\ \textbf{#3}\\  }}
+\newcommand{\employerzz}[2]{{ \textbf{#1} \hfill(#2)\\  }}
+\newcommand{\contact}[3]{
+\vspace*{-8pt}
+\begin{center}
+{\LARGE \scshape {#1}}\\
+#2 \lineunder 
+#3
+\end{center}
+\vspace*{-8pt}
+}
+\newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
+\newcommand{\schoolwithcourses}[4]{
+ \textbf{#1} #2 #3\\ 
+#4 \\
+
+\vspace*{5pt}
+}
+\newcommand{\school}[4]{
+ \textbf{#1} #2 $\bullet$ #3\\ 
+#4 \\
+}
+% END RESUME DEFINITIONS
+\begin{document}
+
+
+\begin{center}
+	\vspace{-60pt}
+{\fontsize{70}{30}\textbf{Sami Davies} }
+\end{center}
+%  {\hfill
+%  \begin{tabular}{c c}
+%    906 El Cajon Way &  craffel@ccrma.stanford.edu\\
+%    Palo Alto, CA 94303 & 507-398-2646 \\ 
+%  \end{tabular}
+ %   \begin{tabular}{c c}
+   %     sedavies@andrew.cmu.edu & SMC 5046, CMU\\
+     %   (717)-507-9253 & Pittsburgh, PA 15289\\
+     %\end{tabular}
+
+ \vspace*{-80pt}
+% Title bar
+\begin{flushleft}
+	\fbox{\begin{minipage}{7.4em}
+		\scriptsize
+		sami@northwestern.edu\\
+		samidavies.com		
+		\end{minipage}}
+\end{flushleft}
+
+%\vspace{2 mm}
+
+% {\fontsize{11}{5}{\header{\selectfont{Contact Information}}}
+% \vspace{1mm}
+% \begin{flushleft}
+% Email: daviess@uw.edu  
+% \end{flushleft}
+% Address: 1800 N 35th St \#5, Seattle WA, 98103 \\ 
+\vspace{-50pt}
+\small
+% \bigskip
+% Title bar
+\begin{flushright}
+{\scshape 
+Post-doc \\
+Northwestern CS\\
+CI Fellow }
+\end{flushright}
+
+\header{Education}
+
+\bigskip
+\employer{University of Washington}{2016-2021 }{~}
+%\schoolwithcourses{Carnegie Mellon University}
+\vspace{-4mm}
+M.S. in Mathematics, 2019\\
+Ph.D. in Mathematics, 2021
+% 3.86/4.0
+%In Major QPA: 3.77/4.0\\
+ \bigskip
+
+\employer{University of Illinois at Chicago}{2015-2016}{~}
+%\schoolwithcourses{Carnegie Mellon University}
+\vspace{-4mm}
+M.S. in Mathematics 
+%  3.84/4.0
+ \bigskip
+
+\employer{Carnegie Mellon University}{2011-2015}{~}
+%\schoolwithcourses{Carnegie Mellon University}
+\vspace{-4mm}
+B.S. in Mathematical Sciences, Minor in Economics\\
+College and University Honors 
+% 3.78/4.0\\
+
+
+\bigskip
+
+\header{Research objective}
+To design algorithms for combinatorial optimization problems that go beyond worst-case analysis
+in order to develop a more complete theoretical understanding of a problem's difficulty, 
+as well as provide performance guarantees that are representative of what happens in practice.
+% To build rigorous mathematical foundations for algorithms and models that are useful in practice.  
+
+% though I am most interested in developing theoretical foundations for learning-augmented algorithms.
+\bigskip
+
+\header{Publications}
+\begin{enumerate}
+\item Sami Davies, Benjamin Moseley, Sergei Vassilvitskii, Yuyan Wang. ``Predictive Flows for Faster Ford-Fulkerson,'' in submission 2022.
+\item Josh Brakensiek, Sami Davies. ``Robust Factorizations and Colorings of Tensor Graphs,'' in submission	2022.
+\item Sami Davies, Samir Khuller, Shirley Zhang. ``Balancing Flow Time and Energy Consumption,'' SPAA 2022.\\
+\item Sami Davies, Arya Mazumdar, Soumyabrata Pal, Cyrus Rashtchian. ``New Lower Bounds on the Total Variation Distance Between Mixtures of Two Gaussians,'' ALT 2022. \\
+\item Sami Davies, Janardhan Kulkarni, Thomas Rothvoss, Sai Sandeep, Jakub Tarnawski, Yihao Zhang. ``On the Hardness of Scheduling with Non-Uniform Communication Delays,'' SODA 2022.\\	
+\item Sami Davies, 	Mikl\'os Z.\ R\'acz, Benjamin Schiffer, Cyrus Rashtchian. ``Approximate Trace Reconstruction: Algorithms,'' ISIT 2021.\\
+\item Sami Davies, Janardhan Kulkarni, Thomas Rothvoss, Jakub Tarnawski, Yihao Zhang.  ``Scheduling with Communication Delays via LP Hierarchies and Clustering II: Weighted Completion Times on Related Machines," SODA 2021.\\
+\item Sami Davies, Janardhan Kulkarni, Thomas Rothvoss, Jakub Tarnawski, Yihao Zhang. ``Scheduling with Communication Delays via LP Hierarchies and Clustering,'' FOCS 2020. \\
+\item Sami Davies, Thomas Rothvoss, Yihao Zhang. ``A Tale of Santa Claus, Hypergraphs and Matroids,'' SODA 2020.
+\end{enumerate}
+\clearpage
+\begin{enumerate} 
+\item[10.] Sami Davies, 	Mikl\'os Z.\ R\'acz, Cyrus Rashtchian. ``Reconstructing Trees from Traces,'' COLT 2019. Full version in the Annals of Applied Probability 31(6): 2772--2810, 2021.
+\item[11.] Sami Davies, Chenxiao Xue, Carl R. Yerger, ``Algorithms for finding knight's tours on Aztec diamonds,'' 
+\textit{Involve, a Journal of Mathematics}, Vol. 10 (2017), No. 5, 721-734.
+\end{enumerate}
+
+% \header{Presentations}
+% \begin{enumerate}
+% \item \textit{On Globally Defined Solutions of the Generalized Constantin-Lax-Majda Equations}. MAA Undergraduate Poster Session: 2015 Joint Mathematics Meeting. Joint presentation with Gopal Yalla.
+% \item \textit{On Globally Defined Solutions of the Generalized Constantin-Lax-Majda Equations}. 2014 Leadership Alliance National Symposium. Joint presentation with Gopal Yalla.
+% \item \textit{Searching for Combinatorial Interpretations Using the Bhargava Defined Factorial}. 2013 Summer Undergraduate Applied Mathematics Institute Symposium. Joint presentation with Joe Gault.
+% \end{enumerate}
+
+
+\header{Recent invited participation and internships}
+
+\bigskip
+\employer{Dagstuhl Seminar in Scheduling}{February 2023}{Shloss Dagstuhl}
+(Upcoming)
+
+\bigskip
+\employer{EECS Rising Stars}{Oct 2022}{UT Austin}
+
+\bigskip
+\employer{TCS Women Rising Stars at STOC 2022}{June 2022}{Rome, Italy (Hybrid)}
+Virtual talk on robust tensor factorization
+
+
+\bigskip
+\employer{IDEAL Workshop on Algorithms for Massive Data Sets}{May 2022}{Northwestern University (Hybrid)}
+Virtual talk on learning-augmented algorithms
+
+\bigskip
+\employer{CanaDAM (Canadian Discrete and Algorithmic Mathematics)}{May 2021}{Virtual talk on scheduling with communication delays}
+
+
+\bigskip
+\employer{Microsoft Research Intern}{Summer 2020}{Redmond (virtual)}
+Hosted by Janardhan Kulkarni and Jakub Tarnawski in the Algorithms group
+
+	
+
+\bigskip
+\employer{Dagstuhl Seminar in Scheduling}{February 2020}{Shloss Dagstuhl}
+Talk on the Santa Claus problem
+
+
+\bigskip
+\employer{Nebraska Conference for Women in Mathematics}{February 2019}{University of Nebraska Lincoln}
+
+
+
+\bigskip
+\employer{Women in Theory}{June 2018}{Harvard University}
+
+% \clearpage
+
+% \bigskip
+% \employer{Leadership Alliance Summer Research Program}{Summer 2014} {Brown University}
+% \textit{Examining Euler Equations}. Joint work with Johnny Guzman, Gopal Yalla 
+
+% \bigskip
+
+% \employer{Summer Undergraduate Applied Mathematics Institute}{Summer 2013}{CMU}
+% \textit{Patterns of the Bhargava Defined Factorial}. Joint work with Joe Gault and Gregory Johnson.
+
+
+
+%\vspace{2mm}
+% \header{Other past projects}
+% \bigskip
+
+
+% \employer{Mechanism Design: Healthcare \& the FedEx Problem }{June 2017 - October 2017} {Anna Karlin: UW}
+% \smallskip	
+% \begin{achievements}
+% 		\item Examined economists' work in adverse and advantageous selection settings to understand the
+% 		issues arising in healthcare allocation from the perspective of mechanism design 
+% 		\item Designed and proved results for a deterministic algorithm for the FedEx problem, which seeks to design a pricing system for package deliveries
+% 	\end{achievements}
+% \bigskip
+
+% \employer{The Santa Claus Problem}{October 2017 - July 2018}{}
+% Joint work with Thomas Rothvoss and Yihao Zhang. The resulting paper, \textbf{A Tale of Santa Claus, Hypergraphs and Matroids} is in submission.
+
+% \bigskip	
+% % \begin{achievements}
+% % 	\item Constructing an approximation algorithm for the Santa Claus problem, a 
+% % 	variant of the classic NP-complete jobs/machines scheduling problem
+% % 	\item Primarily using techniques from matroid optimization and graph theory
+% % \end{achievements}	
+
+
+% \employer{Planted Clique}{October 2015 - June 2016} {Lev Reyzin: UIC}
+% \smallskip
+% 	\begin{achievements}
+% 		\item Studied variants of the planted clique problem and other graph distinguishing
+% 		 problems using statistical algorithms
+% 	\end{achievements}
+% \bigskip
+
+
+% \employer{Knight's Tours on Aztec Diamonds }{February 2015 - May 2015} {Carl Yerger: CMU and Davidson College}
+% \smallskip
+% 	\begin{achievements}
+% 		\item Implemented algorithms that find knight's tours on small Aztec diamonds
+% 		\item Proved traditional inductive arguments for knight's tours fail for Aztec diamonds
+% 	\end{achievements}
+
+% \clearpage
+
+% \employer{Examining Euler Equations }{June 2014 - August 2014} {Johnny Guzman: Brown University}
+% \smallskip
+
+% 	\begin{achievements}
+% 	\item Research was performed under the Leadership Alliance Summer Research Program at Brown University, which aims to prepare underrepresented groups for graduate school
+% 	\item Numerically and analytically examined the behavior of solutions of the one dimensional generalized 
+% 	model vorticity equation 
+% 	%in search of determining whether solutions to the three dimension Euler Equations exist globally
+% 	\end{achievements}
+% \bigskip
+
+
+% 	\begin{achievements}
+% 	\item Research was performed during the 2013 Summer Undergraduate Applied Mathematics Institute at CMU
+% 	\item Discovered properties in binomial coefficients produced using the factorial defined by 
+% 	Manjul Bhargava over geometric progressions
+% 	%\item Studied signal processing and mathematical software with a group of 14 other 
+% 	%mathematics students		
+% 	\end{achievements}
+
+\bigskip
+
+
+\header{Awards and Fellowships}
+\bigskip
+
+\employer{CI Fellow}{2021-2023}{Northwestern University}
+\smallskip
+Awarded funding for a two-year postdoctoral fellowship\\
+
+\bigskip
+
+\employer{Tanzi-Egerton Fellow}{2020}{University of Washington}
+\smallskip
+Awarded to an outstanding senior graduate student in mathematics\\
+
+\bigskip
+
+
+
+\clearpage
+
+\employer{Microsoft Research Dissertation Grant}{2020}{Microsoft Research}
+\smallskip
+Awarded to ten graduate students in computer science across the United States
+\bigskip
+
+\employer{McKibben and Merner Endowed Fellowship in Mathematics}{2017-2019}{University of Washington}
+\smallskip
+Awarded to two students who were exceptional in their preliminary exams 
+and first-year courses\\
+
+\bigskip
+
+% \employer{Department of Mathematics, Statistics, and Computer Science Fellowship}{2015}{University of Illinois at Chicago}
+% \smallskip
+% Awarded to outstanding incoming first year students in the department of MSCS at UIC\\
+% \bigskip
+
+
+% \employer{Senior Leadership Recognition Award}{2015}{Carnegie Mellon University}
+
+% \smallskip
+
+% One of 40 students honored for making significant contributions to CMU's community 
+%  \bigskip
+
+
+
+% \bigskip
+
+%  \employer{Leadership Alliance Scholar}{2014}{~}
+% \smallskip
+% The Leadership Alliance selects talented undergraduates from underrepresented groups with the aim to
+% provide them mentorship and resources to becoming leaders in academia and industry. 
+%  \medskip
+
+
+\header{Teaching}
+
+I taught the following courses:
+\begin{center}
+	\begin{tabular}{ l l l }
+	  \textbf{Math 107}& Math in Society & FEPPS Summer 2018 \\ 
+	  \textbf{CSE 311}&	 Foundations of Computing I & UW Spring 2020 	
+	\end{tabular}
+\end{center}
+
+I served as a teaching assistant for the following courses:
+\begin{center}
+	\begin{tabular}{ l l l }
+	  \textbf{Math 111}& Algebra with Applications & UW Fall 2017 \\ 
+	  \textbf{Math 124}&	 Calculus I & UW Winter  \& Spring 2017  \\  
+	 \textbf{Math 126} &    Multivariable Calculus   & UW Fall 2016    \\
+	\textbf{Math 121}	& Pre-Calculus	& UIC Fall 2015 \& Spring 2016\\	
+	\textbf{21-241}	&	Matrices and Linear Transformations & CMU Spring 2015 	
+	\end{tabular}
+\end{center}
+
+%\item{{\textbf {with high probability}}\\
+%Manage my math blog with high probability, https://samidavies.wordpress.com. Some posts are about topics in advanced mathematics, but most are aimed towards a general audience and motivated by real world examples! (My first year at UW really hindered my writing, but after September 13th 2017, 4pm EST, it should pick back up again.) }
+%\\
+% \smallskip
+% {\scriptsize * : Taught 2 active learning styled sections twice each week,
+%  held weekly office hours, graded exams and weekly quizzes. \\
+% ** : Taught 2 lecture styled sections twice each week, held weekly office hours, graded exams and weekly quizzes.} \\
+
+
+\bigskip
+
+%\header{Presentations}
+%\begin{achievements}
+%\item \textbf{Davies, S.}, Yalla, G. (2014) \textit{On Globally Defined Solutions of the Generalized CLM Equation} \\
+%2015 CMU Meeting of the Minds. Pittsburgh, PA\\
+%2015 Joint Mathematics Meeting. San Antonio, TX\\
+% 2014 Leadership Alliance National Symposium. Stamford, CT
+%\end{achievements}
+
+
+
+\header{Service and outreach}
+
+\bigskip
+\employer{External Reviewer}{}{~}
+\vspace{-5mm}
+SODA 2020, ICALP 2020, \emph{IEEE Transactions on Information Theory}, MFCS 2020, ISAAC 2020, \emph{Operations Research}, 
+PODS 2021, WADS 2021, ICALP 2021, STOC 2022, ICALP 2022, ESA 2022, \emph{Discrete Mathematics}, ISAAC 2022, SODA 2023
+
+
+\bigskip
+\employer{Northwestern Junior Theorists Workshop}{December 2021}{~}
+\vspace{-5mm}
+Co-organized a workshop that highlighted rising theoretical computer scientists.
+https://theory.cs.northwestern.edu/events/2021-junior-theorists-workshop/
+
+\bigskip
+\employer{Washington Directed Reading Program}{2018-2021}{~}
+\vspace{-5mm}
+Mentored for the WDRP, a program that pairs undergraduate students with graduate students for independent reading projects.
+Helped conceive and write grants for the WDRP in summer 2018.
+
+
+\bigskip
+\employer{Mastery Learning Hour}{2021}{~}
+\vspace{-5mm}
+Tutored math for K-12 students. Provided support to students during COVID-19 pandemic.
+
+\bigskip
+\employer{Freedom Education Project Puget Sound (FEPPS)}{2017-2019}{~}
+\vspace{-5mm}
+Tutored during the fall and winter of 2017. Served as the course co-instructor for Math 107
+during the summer of 2018 at the Washington Corrections Center for Women.
+\bigskip
+
+\employer{Math Circle}{2018}{~}
+\vspace{-5mm}
+Served as an instructor during the spring of 2018.
+
+
+\bigskip
+\employer{Assocation for Women in Math}{2016-2021}{~}
+\vspace{-5mm}
+Member since 2016. Served as secretary of the UW student chapter during the 2018-2019 academic year.
+
+
+
+
+
+
+%Assisted in the selection, hiring, and training of a staff of 11 Resident Assistants\\
+% Lead the house staff in the development of a shared house vision for 470 residents, 
+% while serving as an active point of interface between the house community and the greater CMU community
+
+% \bigskip
+%\item Resident Assistant for Morewood E-Tower, Donner House- \hspace{37mm} 08/2012-05/2013
+%\vspace{2mm}
+
+%Was responsible for providing educational programs and paraprofessional counseling for a residence wing of 35 women while resolving issues on diversity, alcohol/ drug abuse, academic performance and social acceptance for a building of 240 first year students. Conducted the live-out mentor program by organizing and fostering mentor-mentee relationships and coordinating various administrative tasks in support of mentor activities.
+ %\textbf{Vice President for Kappa Kappa Gamma: Delta Xi Chapter}\\
+ % January 2013 - December 2013
+%\bigskip
+
+
+% \header{Programming Languages}
+
+% \bigskip
+% Intermediate in in \LaTeX, Python, Julia\\
+% Novice in Matlab, Maple, Ruby, Java
+% \bigskip
+
+
+% \header{Selected Topics Coursework}
+
+% \bigskip
+% \textbf{Carnegie Mellon University}:\\
+% \smallskip
+
+% %Discrete Mathematics (2 semesters) $\qquad$ 
+% %Real Analysis (2 semesters) $\qquad$
+% \begin{center}
+% 	\begin{tabular}{ l l l }
+% 		 Operations Research & Linear Algebra (2 semesters) & Mathematical Finance (2 semesters)  \\ 
+% 		 Graph Theory &	Probability (2 semesters) & Adv. Macroeconomic Theory    \\
+% 		 Market Design & Numerical Methods & Adv. Microeconmic Theory
+% 	\end{tabular}
+% \end{center}
+
+
+% \bigskip
+
+% \textbf{University of Illinois at Chicago}:\\
+% \smallskip
+% \begin{center}
+% 	\begin{tabular}{ l l l }
+% 		Probabilistic Method &  Foundations in Data Science & Adv. Computer Algorithms   \\ 
+% 		Discrete Geometry &	 Measure Theory  &     \\
+% 	\end{tabular}
+% \end{center}
+% \bigskip
+ 
+%  \textbf{University of Washington}:\\
+%  \smallskip
+%  \begin{center}
+% 	 \begin{tabular}{ l l l }
+% 		Counting \& Sampling &  Adv. Linear Algebra (2 quarters)   & Optimization  
+% 	 \end{tabular}
+%  \end{center}\\
+%  \smallskip
+%  \scriptsize{Preliminary exams passed at UW in Complex Analysis and Algebra in September 2017}
+
+
+
+
+
+
+%\employer{Carnegie Mellon University- Department of Student Life}{2012-present}{Resident Assistant}
+%	\begin{achievements}
+%	\item Was responsible for providing educational programs and paraprofessional counseling for a residence wing of 35 women while resolving issues on diversity, alcohol/ drug abuse, academic performance and social acceptance for a building of 240 first year students.
+%	\item Conducted the live-out mentor program by organizing and fostering mentor-mentee relationships and coordinating various administrative tasks in support of mentor activities.
+
+%	\end{achievements}
+
+%\employer{Carnegie Mellon University- Department of Student Life}{2014-present}{Community Advisor}
+%	\begin{achievements}
+%	\item Assisted in the selection, hiring and training of a staff of 11 Resident Assistants.
+%	\item Will lead the house staff in the development of a shared house vision for 470 residents, while serving as an active point of interface between the house community and the greater CMU community.
+%	\end{achievements}
+
+
+\end{document}
