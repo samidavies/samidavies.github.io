@@ -1,4 +1,4 @@
-I"�5<h3 id="combinatorial-games">Combinatorial games</h3>
+I"�-<h3 id="combinatorial-games">Combinatorial games</h3>
 
 <p>Most of us have been playing <strong>combinatorial games</strong> our whole lives and never knew it. These are games where two players alternate turns and know all relevant information to decide how to play next. Furthermore, let’s consider combinatorial games that are <strong>impartial</strong>, which means the only difference between the players is who makes the first move. These games will have an <strong>ending condition</strong>, and as the name suggests, this will ensure that the game ends. When a player wins if and only if they make the last move, the game is said to be <strong>normal</strong>.</p>
 
@@ -20,7 +20,7 @@
 
 <p><img src="\assets\kiss_row.png" alt="kiss" /></p>
 
-<p>Consider the following game between two players. There is a set of <script type="math/tex">n</script> hershey kisses, and each player can remove 1, 3, or 4 hershey kisses on their turn. The player to make the last move wins. I’ve labeled, with short explanations, whether a stack of <script type="math/tex">n</script> hershey kisses is an N or P position in this game, when <script type="math/tex">n</script> is between 0 and 11.</p>
+<p>Consider the following game between two players. There is a set of \(n\) hershey kisses, and each player can remove 1, 3, or 4 hershey kisses on their turn. The player to make the last move wins. I’ve labeled, with short explanations, whether a stack of \(n\) hershey kisses is an N or P position in this game, when \(n\) is between 0 and 11.</p>
 
 <ul>
   <li>
@@ -73,7 +73,7 @@
 
 <p><img src="\assets\nim.png" alt="nim" /></p>
 
-<p>First, let’s define <strong>nim-sum</strong>, but <a href="https://en.wikipedia.org/wiki/Exclusive_or">turn to your old friend</a> if you forget, or never knew, what the <em>xor</em> operation is. When <script type="math/tex">n</script> numbers, <script type="math/tex">x_1,\cdots, x_n</script>, are written in their binary representation, the nim-sum of them is just <script type="math/tex">x_1 \oplus x_2 \oplus \cdots \oplus x_n</script>.</p>
+<p>First, let’s define <strong>nim-sum</strong>, but <a href="https://en.wikipedia.org/wiki/Exclusive_or">turn to your old friend</a> if you forget, or never knew, what the <em>xor</em> operation is. When \(n\) numbers, \(x_1,\cdots, x_n\), are written in their binary representation, the nim-sum of them is just \(x_1 \oplus x_2 \oplus \cdots \oplus x_n\).</p>
 
 <h3 id="boutons-theorem">Bouton’s theorem</h3>
 
@@ -85,44 +85,40 @@
 
 <h4 id="proof">Proof</h4>
 
-<p>In a state of nim with <script type="math/tex">k</script> piles, let <script type="math/tex">x_i</script> be the binary representation for the size of the <script type="math/tex">i^{th}</script> pile. After a move is made, denote the binary representation for the size of the <script type="math/tex">i^{th}</script> pile by <script type="math/tex">x'_i</script>. Remember that during a move, items can only be taken from 1 pile, so only one pile’s size is different than it was before the move. Therefore <script type="math/tex">x_i=x'_i</script> for all <script type="math/tex">i</script> except for exactly one pile, let’s call that pile <script type="math/tex">i^*</script>. Also, note that because we removed items from pile <script type="math/tex">i^*</script>, <script type="math/tex">% <![CDATA[
-x_{i^* } < x_i %]]></script>.</p>
+<p>In a state of nim with \(k\) piles, let \(x_i\) be the binary representation for the size of the \(i^{th}\) pile. After a move is made, denote the binary representation for the size of the \(i^{th}\) pile by \(x'_i\). Remember that during a move, items can only be taken from 1 pile, so only one pile’s size is different than it was before the move. Therefore \(x_i=x'_i\) for all \(i\) except for exactly one pile, let’s call that pile \(i^*\). Also, note that because we removed items from pile \(i^*\), \(x_{i^* } &lt; x_i\).</p>
 
-<p>3 lemmas are needed for the theorem. They use the facts that <script type="math/tex">\oplus</script> on <script type="math/tex">\{0,1\}^m</script> (the set of binary strings of length <script type="math/tex">m</script>) forms an Abelian group. If you don’t speak algebra, <script type="math/tex">\oplus</script> on <script type="math/tex">\{0,1\}^m</script> is associative, commutative, has identity <script type="math/tex">\{0,0, \cdots, 0\}</script>, and has a unique additive inverse for every element in <script type="math/tex">\{0,1\}^m</script>. Regarding the additive inverse, for any number <script type="math/tex">y \in \{0,1\}^m</script>, <script type="math/tex">y \oplus y=0</script>. These facts are all easily verifiable if you’ve got any doubts.</p>
+<p>3 lemmas are needed for the theorem. They use the facts that \(\oplus\) on \(\{0,1\}^m\) (the set of binary strings of length \(m\)) forms an Abelian group. If you don’t speak algebra, \(\oplus\) on \(\{0,1\}^m\) is associative, commutative, has identity \(\{0,0, \cdots, 0\}\), and has a unique additive inverse for every element in \(\{0,1\}^m\). Regarding the additive inverse, for any number \(y \in \{0,1\}^m\), \(y \oplus y=0\). These facts are all easily verifiable if you’ve got any doubts.</p>
 
-<p>For brevity, let <script type="math/tex">X=x_1 \oplus x_2 \oplus \cdots \oplus x_n</script> and <script type="math/tex">X'=x'_1 \oplus x'_2 \oplus \cdots \oplus x'_n</script>.</p>
+<p>For brevity, let \(X=x_1 \oplus x_2 \oplus \cdots \oplus x_n\) and \(X'=x'_1 \oplus x'_2 \oplus \cdots \oplus x'_n\).</p>
 
-<p><strong>Lemma 1</strong> The nim-sum after a move is <script type="math/tex">X'=X \oplus (x_{i^*} \oplus x'_{i^* })</script>.</p>
+<p><strong>Lemma 1</strong> The nim-sum after a move is \(X'=X \oplus (x_{i^*} \oplus x'_{i^* })\).</p>
 
-<p>The proof follows as such, only relying on the properties defined above for <script type="math/tex">\oplus</script> on <script type="math/tex">\{0,1\}^m</script>.</p>
+<p>The proof follows as such, only relying on the properties defined above for \(\oplus\) on \(\{0,1\}^m\).</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align*}
-  \text{nim-sum after a move }&= X'=  0 \oplus X' \\
-  &=  \left (X \oplus X \right) \oplus X' = X \oplus  \left ( X  \oplus X'\right)\\
-  &= X \oplus (x_1 \oplus x'_1) \oplus (x_2 \oplus x'_2) \oplus \cdots \oplus (x_n \oplus x'_n)\\
-  &=X \oplus 0 \oplus \cdots \oplus (x_{i^*} \oplus x'_{i^*})\oplus \cdots \oplus 0\\
-  &= X \oplus (x_{i^*} \oplus x'_{i^*})
-\end{align*} %]]></script>
+\[\begin{align*}
+  \text{nim-sum after a move }&amp;= X'=  0 \oplus X' \\
+  &amp;=  \left (X \oplus X \right) \oplus X' = X \oplus  \left ( X  \oplus X'\right)\\
+  &amp;= X \oplus (x_1 \oplus x'_1) \oplus (x_2 \oplus x'_2) \oplus \cdots \oplus (x_n \oplus x'_n)\\
+  &amp;=X \oplus 0 \oplus \cdots \oplus (x_{i^*} \oplus x'_{i^*})\oplus \cdots \oplus 0\\
+  &amp;= X \oplus (x_{i^*} \oplus x'_{i^*})
+\end{align*}\]
 
-<p><strong>Lemma 2</strong> If  <script type="math/tex">x_1 \oplus x_2 \oplus \cdots \oplus x_n=0</script>, then <script type="math/tex">x'_1 \oplus x'_2 \oplus \cdots \oplus x'_n \neq 0</script> no matter what move is made.</p>
+<p><strong>Lemma 2</strong> If  \(x_1 \oplus x_2 \oplus \cdots \oplus x_n=0\), then \(x'_1 \oplus x'_2 \oplus \cdots \oplus x'_n \neq 0\) no matter what move is made.</p>
 
 <p>This means that if the nim-sum in some stage of a game of nim is 0, it cannot be 0 after a move is made (except in the obvious case where there are no more moves left).</p>
 
-<p>From Lemma 1, <script type="math/tex">X'=X \oplus (x_{i^*} \oplus x'_{i^*})</script>, but here <script type="math/tex">X=0</script>. Thus <script type="math/tex">X'=x_{i^*} \oplus x'_{i^*}</script>. We required that <script type="math/tex">x'_{i^*} \neq x_{i^*}</script>, because it is the unique pile which had items removed in this move. Therefore, <script type="math/tex">x_{i^*} \oplus x'_{i^*} \neq 0</script>, because  <script type="math/tex">x_{i^*}</script>’s unique additive inverse was itself. So if the nim-sum before a move is 0, the nim-sum after that move is not 0.</p>
+<p>From Lemma 1, \(X'=X \oplus (x_{i^*} \oplus x'_{i^*})\), but here \(X=0\). Thus \(X'=x_{i^*} \oplus x'_{i^*}\). We required that \(x'_{i^*} \neq x_{i^*}\), because it is the unique pile which had items removed in this move. Therefore, \(x_{i^*} \oplus x'_{i^*} \neq 0\), because  \(x_{i^*}\)’s unique additive inverse was itself. So if the nim-sum before a move is 0, the nim-sum after that move is not 0.</p>
 
-<p><strong>Lemma 3</strong> If  <script type="math/tex">x_1 \oplus x_2 \oplus \cdots \oplus x_n \neq 0</script>, then there exists some move such that<script type="math/tex">x'_1 \oplus x'_2 \oplus \cdots \oplus x'_n =0</script>. This means that if the nim-sum in some stage of a game of nim is not 0, there is some move that can be made so that after the move, the nim-sum is 0.</p>
+<p><strong>Lemma 3</strong> If  \(x_1 \oplus x_2 \oplus \cdots \oplus x_n \neq 0\), then there exists some move such that\(x'_1 \oplus x'_2 \oplus \cdots \oplus x'_n =0\). This means that if the nim-sum in some stage of a game of nim is not 0, there is some move that can be made so that after the move, the nim-sum is 0.</p>
 
-<p>We know <script type="math/tex">X</script> is not 0, so there is some bit of <script type="math/tex">X</script> which is 1. Let <script type="math/tex">b</script> be the leftmost bit of <script type="math/tex">X</script> which is 1. Also, choose <script type="math/tex">x_{i^*}</script> so that the <script type="math/tex">b^{th}</script> bit of <script type="math/tex">x_{i^* }</script> is also 1 (such an <script type="math/tex">x_{i^* }</script> must exist in order for <script type="math/tex">X</script> to have a 1 in its <script type="math/tex">b^{th}</script> bit). Set <script type="math/tex">x'_{i^ * }=X \oplus x_{i^* }</script>.</p>
+<p>We know \(X\) is not 0, so there is some bit of \(X\) which is 1. Let \(b\) be the leftmost bit of \(X\) which is 1. Also, choose \(x_{i^*}\) so that the \(b^{th}\) bit of \(x_{i^* }\) is also 1 (such an \(x_{i^* }\) must exist in order for \(X\) to have a 1 in its \(b^{th}\) bit). Set \(x'_{i^ * }=X \oplus x_{i^* }\).</p>
 
-<p><script type="math/tex">X \oplus x_{i^* }</script> has a 0 in its <script type="math/tex">b^{th}</script> bit, and <script type="math/tex">b</script> was the leftmost bit of <script type="math/tex">X</script> which is 1. So in <script type="math/tex">X \oplus x_{i^* }</script>, the leftmost bit with a 1 in it  is to the right of <script type="math/tex">b</script>. This implies that <script type="math/tex">x'_{i^ * }</script> decreased by <script type="math/tex">2^b</script>. The bits to the right of <script type="math/tex">b</script> may change, but this could add at most <script type="math/tex">2^b-1</script> to <script type="math/tex">x'_{i^ * }</script>. Therefore we see <script type="math/tex">% <![CDATA[
-x'_{i^ * } < x_{i^ * } %]]></script>. So a player can make a move by taking <script type="math/tex">x_{i^*}-x'_{i^ * }</script> objects from heap <script type="math/tex">i^*</script>. We wish to find the nim-sum after this move, and will make use of Lemma 1 again:</p>
+<p>\(X \oplus x_{i^* }\) has a 0 in its \(b^{th}\) bit, and \(b\) was the leftmost bit of \(X\) which is 1. So in \(X \oplus x_{i^* }\), the leftmost bit with a 1 in it  is to the right of \(b\). This implies that \(x'_{i^ * }\) decreased by \(2^b\). The bits to the right of \(b\) may change, but this could add at most \(2^b-1\) to \(x'_{i^ * }\). Therefore we see \(x'_{i^ * } &lt; x_{i^ * }\). So a player can make a move by taking \(x_{i^*}-x'_{i^ * }\) objects from heap \(i^*\). We wish to find the nim-sum after this move, and will make use of Lemma 1 again:</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align*}
-  \text{nim-sum after move }&= X \oplus (x_{i^*} \oplus x'_{i^*}) = X \oplus (x_{i^*} \oplus X \oplus x_{i^* }) \\
-  &= (X \oplus X) \oplus (x_{i^*} \oplus x_{i^* })= 0 \oplus 0=0
-\end{align*} %]]></script>
+\[\begin{align*}
+  \text{nim-sum after move }&amp;= X \oplus (x_{i^*} \oplus x'_{i^*}) = X \oplus (x_{i^*} \oplus X \oplus x_{i^* }) \\
+  &amp;= (X \oplus X) \oplus (x_{i^*} \oplus x_{i^* })= 0 \oplus 0=0
+\end{align*}\]
 
 <p>So if the nim-sum in not 0, there is some move that can be made so that after the move, the nim-sum is 0.</p>
 

@@ -1,4 +1,4 @@
-I"a4<h3 id="a-quick-intro">A quick intro</h3>
+I"X*<h3 id="a-quick-intro">A quick intro</h3>
 
 <p>This post will outline the paper <a href="https://arxiv.org/abs/1411.3317"><em>Finding Adam in random growing trees</em></a> by Bubeck, Devroye, and Lugosi. The main question examined in this paper is simply stated and relatively unstudied:
 given a tree, which has been generated under some attachment model, find the first vertex. “First” here meaning oldest.
@@ -18,7 +18,7 @@ Think about the spread of a rumor, or disease. In these situations, the resultin
 
 <h3 id="what-does-this-paper-prove">What does this paper prove?</h3>
 
-<p>Given a tree <script type="math/tex">T</script> on <script type="math/tex">n</script> vertices and an error bound <script type="math/tex">\epsilon \in (0,1)</script>, a <strong>root-finding algorithm</strong> outputs a set <script type="math/tex">H(T,\epsilon)</script> of size <script type="math/tex">K=K(\epsilon)</script> vertices such that as <script type="math/tex">n \rightarrow \infty^+</script>, with probability at least <script type="math/tex">1-\epsilon</script>, the first vertex is in <script type="math/tex">H(T,\epsilon)</script>.</p>
+<p>Given a tree \(T\) on \(n\) vertices and an error bound \(\epsilon \in (0,1)\), a <strong>root-finding algorithm</strong> outputs a set \(H(T,\epsilon)\) of size \(K=K(\epsilon)\) vertices such that as \(n \rightarrow \infty^+\), with probability at least \(1-\epsilon\), the first vertex is in \(H(T,\epsilon)\).</p>
 
 <p>Now the insight as to why root-finding algorithms are interesting: <strong>the size of the vertex set output by a root-finding algorithm does not depend on the size of the tree.</strong> The size of the set output only depends on the probability that the first vertex is in that set, but the tree can be huge and it doesn’t matter.</p>
 
@@ -29,90 +29,90 @@ Think about the spread of a rumor, or disease. In these situations, the resultin
     <p>The existence of root-finding algorithms for trees generated from a uniform or preferential attachment model.</p>
   </li>
   <li>
-    <p>A root-finding algorithm for trees generated from the UA model, where the size of the set found by the algorithm is sub-polynomial in <script type="math/tex">1/ \epsilon</script>. Bounds for the best value of <script type="math/tex">K</script> are almost tight for trees grown under the UA model.</p>
+    <p>A root-finding algorithm for trees generated from the UA model, where the size of the set found by the algorithm is sub-polynomial in \(1/ \epsilon\). Bounds for the best value of \(K\) are almost tight for trees grown under the UA model.</p>
   </li>
   <li>
-    <p>An impossibility result showing that for a tree grown under the PA model, root-finding algorithms output a set of size at least polynomial in <script type="math/tex">1 / \epsilon</script>.</p>
+    <p>An impossibility result showing that for a tree grown under the PA model, root-finding algorithms output a set of size at least polynomial in \(1 / \epsilon\).</p>
   </li>
 </ol>
 
 <h3 id="existence-of-root-finding-algorithms">Existence of root-finding algorithms</h3>
 
-<p>First, note that it’s not obvious that root-finding algorithms even exist. The authors point out that one heuristic which would not work in this situation is to output the set of vertices from the tree which have large degree. This seems like a reasonable heuristic, as the older the vertex is, the more likely it is to have more edges (especially under the uniform attachment model). However, in order for such a set to contain the first vertex with constant probability, it must be of size at least logarithmic in the number of vertices in the tree. For a tree generated under the UA model, a simple expectation calculation on the degree of the first vertex after <script type="math/tex">n</script> vertices are in the tree and knowledge of concentration inequalities should convince you of this.</p>
+<p>First, note that it’s not obvious that root-finding algorithms even exist. The authors point out that one heuristic which would not work in this situation is to output the set of vertices from the tree which have large degree. This seems like a reasonable heuristic, as the older the vertex is, the more likely it is to have more edges (especially under the uniform attachment model). However, in order for such a set to contain the first vertex with constant probability, it must be of size at least logarithmic in the number of vertices in the tree. For a tree generated under the UA model, a simple expectation calculation on the degree of the first vertex after \(n\) vertices are in the tree and knowledge of concentration inequalities should convince you of this.</p>
 
-<p>The authors construct a simple root-finding algorithm, which given a tree <script type="math/tex">T</script>, generated under the UA or PA model, and target accuracy <script type="math/tex">\epsilon</script>, produces a set of vertices <script type="math/tex">H(T,\epsilon)</script> of size <script type="math/tex">K</script>.</p>
+<p>The authors construct a simple root-finding algorithm, which given a tree \(T\), generated under the UA or PA model, and target accuracy \(\epsilon\), produces a set of vertices \(H(T,\epsilon)\) of size \(K\).</p>
 
-<p><strong>Theorem 1a</strong> <em>For a tree with <script type="math/tex">n</script> vertices generated under the uniform attachment model, the simple root-finding algorithm produces <script type="math/tex">H(T,\epsilon)</script> such that for <script type="math/tex">K \geq 2.5 \frac{ \log(1/ \epsilon)}{\epsilon}</script>,</em></p>
+<p><strong>Theorem 1a</strong> <em>For a tree with \(n\) vertices generated under the uniform attachment model, the simple root-finding algorithm produces \(H(T,\epsilon)\) such that for \(K \geq 2.5 \frac{ \log(1/ \epsilon)}{\epsilon}\),</em></p>
 
-<script type="math/tex; mode=display">\begin{align*}
+\[\begin{align*}
 \liminf\limits_{n \rightarrow \infty^+}\mathbb{P}( \text{vertex 1 is in }H(T,\epsilon)) \geq 1-\frac{4 \epsilon}{1-\epsilon}.
-\end{align*}</script>
+\end{align*}\]
 
-<p><strong>Theorem 1b</strong> <em>For a tree with <script type="math/tex">n</script> vertices generated under the preferential attachment model, the simple root-finding algorithm produces <script type="math/tex">H(T,\epsilon)</script> such that for <script type="math/tex">K \geq C \frac{\log^2 (1 / \epsilon)}{\epsilon^4}</script> for some constant <script type="math/tex">C>0</script>,</em></p>
+<p><strong>Theorem 1b</strong> <em>For a tree with \(n\) vertices generated under the preferential attachment model, the simple root-finding algorithm produces \(H(T,\epsilon)\) such that for \(K \geq C \frac{\log^2 (1 / \epsilon)}{\epsilon^4}\) for some constant \(C&gt;0\),</em></p>
 
-<script type="math/tex; mode=display">\begin{align*}
+\[\begin{align*}
 \liminf\limits_{n \rightarrow \infty^+}\mathbb{P}( \text{vertex 1 is in }H(T,\epsilon)) \geq 1-\epsilon.
-\end{align*}</script>
+\end{align*}\]
 
 <h4 id="a-simple-root-finding-algorithm">A simple root-finding algorithm</h4>
 
-<p>Let <script type="math/tex">(T,u)</script> denote the tree <script type="math/tex">T</script> with first vertex <script type="math/tex">u</script>, and let <script type="math/tex">T_{v \downarrow}</script> denote the subtree starting at <script type="math/tex">v</script>.
-Define the function <script type="math/tex">\psi_T: V(T) \rightarrow \mathbb{N}</script> such that</p>
+<p>Let \((T,u)\) denote the tree \(T\) with first vertex \(u\), and let \(T_{v \downarrow}\) denote the subtree starting at \(v\).
+Define the function \(\psi_T: V(T) \rightarrow \mathbb{N}\) such that</p>
 
-<script type="math/tex; mode=display">\begin{align*}
+\[\begin{align*}
 \psi_T(u)=\max\limits_{v \in V(T) \setminus \{u\}} |(T,u)_{v \downarrow}|.
-\end{align*}</script>
+\end{align*}\]
 
-<p>In other words, <script type="math/tex">\psi</script> inputs a vertex <script type="math/tex">u</script>, views <script type="math/tex">u</script> as the first vertex of the tree, then returns the size of the largest subtree starting at some child of <script type="math/tex">u</script>. An example is given for a tree below.</p>
+<p>In other words, \(\psi\) inputs a vertex \(u\), views \(u\) as the first vertex of the tree, then returns the size of the largest subtree starting at some child of \(u\). An example is given for a tree below.</p>
 
 <p><img src="\assets\root_find_alg.png" alt="algorithm" /></p>
 
-<p>Here, <script type="math/tex">\psi_T(u)= \max\{1,2,1,3,1,1,6,2,1,3,1,1\}=6</script></p>
+<p>Here, \(\psi_T(u)= \max\{1,2,1,3,1,1,6,2,1,3,1,1\}=6\)</p>
 
-<p>Then let <script type="math/tex">H_{\psi}</script> be the mapping which returns the <script type="math/tex">K</script> set with the smallest <script type="math/tex">\psi</script> values. This procedure satisfies Theorems 1a and 1b, but the proofs are omitted in this post (check <a href="https://arxiv.org/abs/1411.3317">the paper</a> if you want to see them).</p>
+<p>Then let \(H_{\psi}\) be the mapping which returns the \(K\) set with the smallest \(\psi\) values. This procedure satisfies Theorems 1a and 1b, but the proofs are omitted in this post (check <a href="https://arxiv.org/abs/1411.3317">the paper</a> if you want to see them).</p>
 
 <h3 id="doing-better-under-the-ua-model">Doing better under the UA model</h3>
 
-<p>The simple root-finding algorithm outputs a set of size <script type="math/tex">O(1/ \epsilon \log (1 / \epsilon))</script> for a tree grown under the UA model. Next, the paper explains an algorithm which outputs a set of size subpolynomial in <script type="math/tex">1 / \epsilon</script>.</p>
+<p>The simple root-finding algorithm outputs a set of size \(O(1/ \epsilon \log (1 / \epsilon))\) for a tree grown under the UA model. Next, the paper explains an algorithm which outputs a set of size subpolynomial in \(1 / \epsilon\).</p>
 
-<p><strong>Theorem 2</strong> <em>For a tree <script type="math/tex">T</script> with <script type="math/tex">n</script> vertices generated under the UA model, there exist universal constants <script type="math/tex">a,b>0</script> such that if <script type="math/tex">K \geq a \exp \left ( b \frac{\log(1/ \epsilon)}{\log \log (1 / \epsilon)}\right )</script>, then</em></p>
+<p><strong>Theorem 2</strong> <em>For a tree \(T\) with \(n\) vertices generated under the UA model, there exist universal constants \(a,b&gt;0\) such that if \(K \geq a \exp \left ( b \frac{\log(1/ \epsilon)}{\log \log (1 / \epsilon)}\right )\), then</em></p>
 
-<script type="math/tex; mode=display">\begin{align*}
+\[\begin{align*}
 \liminf\limits_{n \rightarrow \infty^+} \mathbb{P} (\text{vertex 1 is in }H(T,\epsilon)) \geq 1- \epsilon.
-\end{align*}</script>
+\end{align*}\]
 
-<p>The authors note that the function <script type="math/tex">\psi</script> defined in the simple root-finding algorithm can be viewed as a relaxation of a <a href="https://en.wikipedia.org/wiki/Likelihood_function">likelihood function</a>. So they define a tighter relaxation of a likelihood function to improve the result under the UA model. Let <script type="math/tex">(T,u)</script> denote the tree <script type="math/tex">T</script> with first vertex <script type="math/tex">u</script>, and let <script type="math/tex">T_{v \downarrow}</script> denote the subtree starting at <script type="math/tex">v</script>.
-Define the function <script type="math/tex">\phi_T: V(T) \rightarrow \mathbb{N}</script> such that</p>
+<p>The authors note that the function \(\psi\) defined in the simple root-finding algorithm can be viewed as a relaxation of a <a href="https://en.wikipedia.org/wiki/Likelihood_function">likelihood function</a>. So they define a tighter relaxation of a likelihood function to improve the result under the UA model. Let \((T,u)\) denote the tree \(T\) with first vertex \(u\), and let \(T_{v \downarrow}\) denote the subtree starting at \(v\).
+Define the function \(\phi_T: V(T) \rightarrow \mathbb{N}\) such that</p>
 
-<script type="math/tex; mode=display">\begin{align*}
+\[\begin{align*}
 \phi_T(u)=\prod\limits_{v \in V(T) \setminus \{u\}} |(T,u)_{v \downarrow}|.
-\end{align*}</script>
+\end{align*}\]
 
-<p>Let <script type="math/tex">H_{\phi}</script> be a mapping which returns the <script type="math/tex">K</script> vertices in <script type="math/tex">T</script> with the smallest <script type="math/tex">\phi</script> values.</p>
+<p>Let \(H_{\phi}\) be a mapping which returns the \(K\) vertices in \(T\) with the smallest \(\phi\) values.</p>
 
-<p>The values returned by <script type="math/tex">\phi</script> make sense intuitively. A leaf will have <script type="math/tex">\phi</script> value <script type="math/tex">n-1</script>, and a vertex near the center of the tree will have large <script type="math/tex">\phi</script> value. Using the same example tree <script type="math/tex">T</script> given earlier for the simple root finding algorithm: <script type="math/tex">\phi_T(u)=1*2*1*3*1*1*6*2*1*3*1*1=216.</script></p>
+<p>The values returned by \(\phi\) make sense intuitively. A leaf will have \(\phi\) value \(n-1\), and a vertex near the center of the tree will have large \(\phi\) value. Using the same example tree \(T\) given earlier for the simple root finding algorithm: \(\phi_T(u)=1*2*1*3*1*1*6*2*1*3*1*1=216.\)</p>
 
 <p>This procedure satisfies Theorem 2, but the proofs are omitted in this post (Again, check <a href="https://arxiv.org/abs/1411.3317">the paper</a> to read it).</p>
 
 <h3 id="cant-do-much-better-under-the-pa-model">Can’t do much better under the PA model</h3>
 
-<p>In the section above, the set output has size subpolynomial in <script type="math/tex">1 / \epsilon</script>. For a tree generated under the PA model, the set output has size at least polynomial in <script type="math/tex">1 / \epsilon</script>.</p>
+<p>In the section above, the set output has size subpolynomial in \(1 / \epsilon\). For a tree generated under the PA model, the set output has size at least polynomial in \(1 / \epsilon\).</p>
 
-<p><strong>Theorem 3</strong> <em>For a tree <script type="math/tex">T</script> with <script type="math/tex">n</script> vertices generated under the PA model, there exists <script type="math/tex">c>0</script> such that for <script type="math/tex">\epsilon \in (0,1)</script>, any procedure that satisfies</em></p>
+<p><strong>Theorem 3</strong> <em>For a tree \(T\) with \(n\) vertices generated under the PA model, there exists \(c&gt;0\) such that for \(\epsilon \in (0,1)\), any procedure that satisfies</em></p>
 
-<script type="math/tex; mode=display">\begin{align*}
+\[\begin{align*}
 \liminf\limits_{n \rightarrow \infty^+} \mathbb{P} (\text{vertex 1 is in }H(T,\epsilon)) \geq 1- \epsilon
-\end{align*}</script>
+\end{align*}\]
 
-<p><em>in the preferential attachment model must have <script type="math/tex">K \geq c/ \epsilon</script>.</em></p>
+<p><em>in the preferential attachment model must have \(K \geq c/ \epsilon\).</em></p>
 
 <p>Basically, a tree grown under the preferential attachment model is more likely to have its first vertex be isomorphic to a bunch of leaves. So the first vertex is indistinguishable in some set of leaves</p>
 
 <h4 id="outline-proof-of-theorem-3">Outline proof of Theorem 3</h4>
 
-<p>Earlier in the paper, it’s shown that the probability of error for the optimal procedure is nondecreasing in <script type="math/tex">n</script>, which means that finding the first vertex doesn’t get easier as the tree grows. Thus, it suffices to show that the optimal procedure has probability of error <script type="math/tex">\geq \epsilon</script> for some finite <script type="math/tex">n</script>. We’ll show <script type="math/tex">\exists n_0</script> for which with probability <script type="math/tex">\geq 2 \epsilon</script>, the first vertex is isomorphic to at least <script type="math/tex">2 c / \epsilon</script> vertices in the tree. In this setting, any algorithm which outputs less than <script type="math/tex">c / \epsilon</script> vertices has probability of error at least <script type="math/tex">\epsilon</script>.</p>
+<p>Earlier in the paper, it’s shown that the probability of error for the optimal procedure is nondecreasing in \(n\), which means that finding the first vertex doesn’t get easier as the tree grows. Thus, it suffices to show that the optimal procedure has probability of error \(\geq \epsilon\) for some finite \(n\). We’ll show \(\exists n_0\) for which with probability \(\geq 2 \epsilon\), the first vertex is isomorphic to at least \(2 c / \epsilon\) vertices in the tree. In this setting, any algorithm which outputs less than \(c / \epsilon\) vertices has probability of error at least \(\epsilon\).</p>
 
-<p>The probability that the first vertex is a leaf is <script type="math/tex">\Theta(1/\sqrt n)</script>. Let <script type="math/tex">n_0=1/\epsilon^2</script>, and the probability that the first vertex is a leaf is <script type="math/tex">\Theta(\epsilon)</script>. Given that the first vertex is a leaf, the probability that vertex 2 is connected to <script type="math/tex">\Theta(\sqrt n)=\Theta(1/\epsilon)</script> leaves is <script type="math/tex">\Theta(1)</script>. All of these leaves would be isomorphic to the first vertex.</p>
+<p>The probability that the first vertex is a leaf is \(\Theta(1/\sqrt n)\). Let \(n_0=1/\epsilon^2\), and the probability that the first vertex is a leaf is \(\Theta(\epsilon)\). Given that the first vertex is a leaf, the probability that vertex 2 is connected to \(\Theta(\sqrt n)=\Theta(1/\epsilon)\) leaves is \(\Theta(1)\). All of these leaves would be isomorphic to the first vertex.</p>
 
 <h3 id="previous-work-on-similar-problems">Previous work on similar problems</h3>
 

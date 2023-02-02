@@ -1,4 +1,4 @@
-I"�C<h3 id="why-do-people-care-about-triangles">Why do people care about triangles</h3>
+I"2<h3 id="why-do-people-care-about-triangles">Why do people care about triangles</h3>
 
 <p>Whether or not a graph contains any triangles (3 vertices which are all adjacent to each other) is relevant for many questions in mathematics. Below, some interesting ones are briefly explained in order to motivate why people care about triangles.</p>
 
@@ -6,125 +6,115 @@
 
 <h4 id="intersection-graphs">Intersection graphs</h4>
 
-<p>The intersection graph of a family of lines <script type="math/tex">\mathcal{L}</script> is the graph on the vertex set <script type="math/tex">\mathcal{L}</script>, where an edge exists between <script type="math/tex">l_1,l_2 \in \mathcal{L}</script> if and only if <script type="math/tex">l_1</script> and <script type="math/tex">l_2</script> intersect. A famous question posed by Erdös in the 1970s is whether the chromatic number of intersections graphs of line segments is bounded by a function of their clique number (the maximum size of a clique in the graph). The answer: “no” was recently published in <a href="http://arxiv.org/pdf/1209.1595.pdf">this paper</a>.</p>
+<p>The intersection graph of a family of lines \(\mathcal{L}\) is the graph on the vertex set \(\mathcal{L}\), where an edge exists between \(l_1,l_2 \in \mathcal{L}\) if and only if \(l_1\) and \(l_2\) intersect. A famous question posed by Erdös in the 1970s is whether the chromatic number of intersections graphs of line segments is bounded by a function of their clique number (the maximum size of a clique in the graph). The answer: “no” was recently published in <a href="http://arxiv.org/pdf/1209.1595.pdf">this paper</a>.</p>
 
-<p>The authors prove that for every positive integer <script type="math/tex">k</script>, there exists an arrangement of a finite number of line segments so that the intersection graph of the line segments is triangle-free and has chromatic number greater than <script type="math/tex">k</script>. Think about how you would construct a graph with large chromatic number. Intuitively, you might think you have to have 2 intersecting lines, which are both different colors in a proper coloring, and then another line intersecting both of those. But this is exactly a triangle! Thus the construction of this arrangement is by no means obvious and is of interest to those who study combinatorial geometry.</p>
+<p>The authors prove that for every positive integer \(k\), there exists an arrangement of a finite number of line segments so that the intersection graph of the line segments is triangle-free and has chromatic number greater than \(k\). Think about how you would construct a graph with large chromatic number. Intuitively, you might think you have to have 2 intersecting lines, which are both different colors in a proper coloring, and then another line intersecting both of those. But this is exactly a triangle! Thus the construction of this arrangement is by no means obvious and is of interest to those who study combinatorial geometry.</p>
 
-<p>Also in the realm of incidence geometry, the triangle removal lemma is explicitly used in <a href="http://arxiv.org/pdf/math/0504009v1.pdf">this 2008  paper by Solymosi</a>. The author proves that when an arrangement of points and lines defines a lot of incidences (at least <script type="math/tex">cn^{4/3}</script> as given by the Szemerédi-Trotter theorem), then there exists <script type="math/tex">k</script> points, which are not collinear or concurrent, so that any pair of them is incident to a line.</p>
+<p>Also in the realm of incidence geometry, the triangle removal lemma is explicitly used in <a href="http://arxiv.org/pdf/math/0504009v1.pdf">this 2008  paper by Solymosi</a>. The author proves that when an arrangement of points and lines defines a lot of incidences (at least \(cn^{4/3}\) as given by the Szemerédi-Trotter theorem), then there exists \(k\) points, which are not collinear or concurrent, so that any pair of them is incident to a line.</p>
 
 <h4 id="networks-phase-transitions-and-independence-number">Networks: phase transitions and independence number</h4>
 
-<p>In a network, the existence of triangles may be undesirable depending on the network’s purpose. For example, a random graph on <script type="math/tex">n</script> vertices without any cliques is exactly a triangle-free graph. It’s easy to prove using the second moment method that with high probability an <a href="https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model">Erdö-Rényi</a> random graph on <script type="math/tex">n</script> vertices is triangle-free for <script type="math/tex">p = o(1/n)</script>, where <script type="math/tex">p</script> is the probability of an edge between any 2 vertices.</p>
+<p>In a network, the existence of triangles may be undesirable depending on the network’s purpose. For example, a random graph on \(n\) vertices without any cliques is exactly a triangle-free graph. It’s easy to prove using the second moment method that with high probability an <a href="https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model">Erdö-Rényi</a> random graph on \(n\) vertices is triangle-free for \(p = o(1/n)\), where \(p\) is the probability of an edge between any 2 vertices.</p>
 
-<p>Furthermore, Ajtai, Komlós, and Szemerédi showed that when a graph <script type="math/tex">G</script> on <script type="math/tex">n</script> vertices is triangle-free with maximum degree at most <script type="math/tex">d \geq 1</script>, it has a large independence number <script type="math/tex">\alpha(G) >\frac{n \cdot \log d}{8d}</script>. Thus knowing whether the underlying graph of a network is triangle-free provides confirmation of the existence of a large independent set in the network.</p>
+<p>Furthermore, Ajtai, Komlós, and Szemerédi showed that when a graph \(G\) on \(n\) vertices is triangle-free with maximum degree at most \(d \geq 1\), it has a large independence number \(\alpha(G) &gt;\frac{n \cdot \log d}{8d}\). Thus knowing whether the underlying graph of a network is triangle-free provides confirmation of the existence of a large independent set in the network.</p>
 
 <h4 id="arithmetic-progressions">Arithmetic progressions</h4>
 
-<p>This last result is actually a consequence of the theorem proven in this post: the triangle removal lemma. Roth’s lemma states that for <script type="math/tex">A \subset \mathbb{N}</script> which has <a href="https://en.wikipedia.org/wiki/Natural_density#Upper_and_lower_asymptotic_density">positive upper density</a>, <script type="math/tex">A</script> contains an arithmetic progression of length 3. For reasons beyond my knowledge base, as my knowledge base of number theory is <script type="math/tex">\epsilon</script>, arithmetic progressions with common differences of 3 or 4 are very important in number theory.</p>
+<p>This last result is actually a consequence of the theorem proven in this post: the triangle removal lemma. Roth’s lemma states that for \(A \subset \mathbb{N}\) which has <a href="https://en.wikipedia.org/wiki/Natural_density#Upper_and_lower_asymptotic_density">positive upper density</a>, \(A\) contains an arithmetic progression of length 3. For reasons beyond my knowledge base, as my knowledge base of number theory is \(\epsilon\), arithmetic progressions with common differences of 3 or 4 are very important in number theory.</p>
 
 <p><img src="\assets\triangle_line.png" alt="triangleline" /></p>
 
 <p>The triangle removal lemma shows that if a lot of edges must be removed to make a graph triangle-free, then there must have been a lot of triangles in the graph to begin with. Groundbreaking, right?</p>
 
-<p><strong>The Triangle Removal Lemma</strong> For every <script type="math/tex">\epsilon>0</script> there exists <script type="math/tex">\delta>0</script> such that for any graph <script type="math/tex">G</script> on <script type="math/tex">n</script> vertices where at least <script type="math/tex">\epsilon n^2</script> edges must be removed in order to make it triangle-free, <script type="math/tex">G</script> contains at least <script type="math/tex">\delta n^3</script> triangles.</p>
+<p><strong>The Triangle Removal Lemma</strong> For every \(\epsilon&gt;0\) there exists \(\delta&gt;0\) such that for any graph \(G\) on \(n\) vertices where at least \(\epsilon n^2\) edges must be removed in order to make it triangle-free, \(G\) contains at least \(\delta n^3\) triangles.</p>
 
 <p>Thus for the reasons listed above, and many many more, the triangle removal lemma is a very useful tool. Its proof is due to Rusza and Szemerédi.</p>
 
 <h3 id="background-and-definitions">Background and definitions</h3>
 
-<p>If you’re familiar with <a href="https://en.wikipedia.org/wiki/Szemer%C3%A9di_regularity_lemma">Szemerédi’s regularity lemma</a>, you can probably skip this section. From now on I’ll use standard graph theory notation, but will introduce all non-basic definitions. Assume <script type="math/tex">G=(V,E)</script> is a graph with vertex set <script type="math/tex">V</script> and edge set <script type="math/tex">E</script>.</p>
+<p>If you’re familiar with <a href="https://en.wikipedia.org/wiki/Szemer%C3%A9di_regularity_lemma">Szemerédi’s regularity lemma</a>, you can probably skip this section. From now on I’ll use standard graph theory notation, but will introduce all non-basic definitions. Assume \(G=(V,E)\) is a graph with vertex set \(V\) and edge set \(E\).</p>
 
 <p>The triangle removal lemma and regularity lemma both rely on the fact that “most graphs look random”.</p>
 
-<p>First, let <script type="math/tex">A,B \subset V</script> where <script type="math/tex">A</script> and <script type="math/tex">B</script> are disjoint. The <strong>density</strong> of the pair <script type="math/tex">(A,B)</script> is defined as</p>
+<p>First, let \(A,B \subset V\) where \(A\) and \(B\) are disjoint. The <strong>density</strong> of the pair \((A,B)\) is defined as</p>
 
-<script type="math/tex; mode=display">d(A,B)=\frac{|E(A,B)|}{|A||B|}.</script>
+\[d(A,B)=\frac{|E(A,B)|}{|A||B|}.\]
 
-<p>Think of density as a measurement in <script type="math/tex">[0,1]</script>, where it represents the fraction of total possible edges between two disjoint sets, which are edges in the graph. To illustrate this, note that all disjoint pairs of vertices in a complete graph have density 1, and most of the pairs of vertices in a sparse graph will have density close to 0.</p>
+<p>Think of density as a measurement in \([0,1]\), where it represents the fraction of total possible edges between two disjoint sets, which are edges in the graph. To illustrate this, note that all disjoint pairs of vertices in a complete graph have density 1, and most of the pairs of vertices in a sparse graph will have density close to 0.</p>
 
-<p>Furthermore, <script type="math/tex">(A,B)</script> is said to be <strong><script type="math/tex">\epsilon</script>-pseudo-random</strong> if for all pairs <script type="math/tex">(A',B')</script>, where <script type="math/tex">A' \subset A</script> and <script type="math/tex">B'\subset B</script>, <script type="math/tex">|d(A,B)-d(A',B')| \leq \epsilon</script>. Basically, the edge density in a pair of subsets is pretty much uniform across the pair. The figure below illustrates a graph that obviously satisfies this definition for pseudo-random, <script type="math/tex">K_{4,4}</script>, and a graph that is definitely not pseudo-random.
-A subset pair which is <script type="math/tex">\epsilon</script>-pseduo-random doesn’t have an area where most of its edges lie.</p>
+<p>Furthermore, \((A,B)\) is said to be <strong>\(\epsilon\)-pseudo-random</strong> if for all pairs \((A',B')\), where \(A' \subset A\) and \(B'\subset B\), \(|d(A,B)-d(A',B')| \leq \epsilon\). Basically, the edge density in a pair of subsets is pretty much uniform across the pair. The figure below illustrates a graph that obviously satisfies this definition for pseudo-random, \(K_{4,4}\), and a graph that is definitely not pseudo-random.
+A subset pair which is \(\epsilon\)-pseduo-random doesn’t have an area where most of its edges lie.</p>
 
 <p><img src="\assets\pseudorandom.png" alt="random" /></p>
 
-<p>Next, a partition on <script type="math/tex">V</script> into sets <script type="math/tex">V_1,\cdots, V_k</script> is said to be <strong><script type="math/tex">\epsilon</script>-regular</strong> if the following two conditions hold:</p>
+<p>Next, a partition on \(V\) into sets \(V_1,\cdots, V_k\) is said to be <strong>\(\epsilon\)-regular</strong> if the following two conditions hold:</p>
 
 <ol>
   <li>
-    <p>For all <script type="math/tex">i,j \in [k]</script>, <script type="math/tex">\mid \vert V_i \vert-\vert V_j \vert \mid \leq 1</script>.</p>
+    <p>For all \(i,j \in [k]\), \(\mid \vert V_i \vert-\vert V_j \vert \mid \leq 1\).</p>
   </li>
   <li>
-    <p>All except <script type="math/tex">\epsilon k^2</script> pairs of subsets from the partitions <script type="math/tex">V_i,V_j</script>, for <script type="math/tex">% <![CDATA[
-i<j %]]></script>, are <script type="math/tex">\epsilon</script>-pseudo-random</p>
+    <p>All except \(\epsilon k^2\) pairs of subsets from the partitions \(V_i,V_j\), for \(i&lt;j\), are \(\epsilon\)-pseudo-random</p>
   </li>
 </ol>
 
-<p>So, a partition on the vertices is  <script type="math/tex">\epsilon</script>-regular if it is  as close as can be to a <script type="math/tex">k</script> equi-partition, and most pairs in this partition have close to uniform edge density between them.</p>
+<p>So, a partition on the vertices is  \(\epsilon\)-regular if it is  as close as can be to a \(k\) equi-partition, and most pairs in this partition have close to uniform edge density between them.</p>
 
 <h3 id="formal-statement">Formal statement</h3>
 
 <p>Now with all the necessary definitions, it’s time for the statement of the lemma and its proof!</p>
 
 <p><strong>The Triangle Removal Lemma</strong>
-For every <script type="math/tex">\epsilon>0</script> there exists <script type="math/tex">\delta>0</script> such that for any graph <script type="math/tex">G</script> on <script type="math/tex">n</script> vertices where at least <script type="math/tex">\epsilon n^2</script> edges must be removed in order to make it triangle-free, <script type="math/tex">G</script> contains at least <script type="math/tex">\delta n^3</script> triangles.</p>
+For every \(\epsilon&gt;0\) there exists \(\delta&gt;0\) such that for any graph \(G\) on \(n\) vertices where at least \(\epsilon n^2\) edges must be removed in order to make it triangle-free, \(G\) contains at least \(\delta n^3\) triangles.</p>
 
-<p>A common equivalent statement is: for every <script type="math/tex">\epsilon>0</script> there exists <script type="math/tex">\delta>0</script> such that for any graph <script type="math/tex">G</script> on <script type="math/tex">n</script> vertices with at most <script type="math/tex">\delta n^3</script> triangles, there exists a set of at most <script type="math/tex">\epsilon n^2</script> edges, which when removed results in a triangle-free graph.</p>
+<p>A common equivalent statement is: for every \(\epsilon&gt;0\) there exists \(\delta&gt;0\) such that for any graph \(G\) on \(n\) vertices with at most \(\delta n^3\) triangles, there exists a set of at most \(\epsilon n^2\) edges, which when removed results in a triangle-free graph.</p>
 
 <h4 id="proof">Proof</h4>
 
-<p>Let <script type="math/tex">G</script> be a graph on <script type="math/tex">n</script> vertices, where at least <script type="math/tex">\epsilon n^2</script> edges must be removed in order to make the graph triangle-free. Let <script type="math/tex">V_1, \cdots, V_k</script> be an <script type="math/tex">\frac{\epsilon}{4}</script>-regular partition on <script type="math/tex">V</script>. Such a partition exists by <a href="https://en.wikipedia.org/wiki/Szemer%C3%A9di_regularity_lemma">Szemerédi’s regularity lemma</a>. Edges which satisfy one of 3 conditions, to be enumerated soon, will be removed. Then it’s argued that at most <script type="math/tex">\epsilon n^2</script> edges were removed and there are still at least <script type="math/tex">\delta n^3</script> triangles in the graph.</p>
+<p>Let \(G\) be a graph on \(n\) vertices, where at least \(\epsilon n^2\) edges must be removed in order to make the graph triangle-free. Let \(V_1, \cdots, V_k\) be an \(\frac{\epsilon}{4}\)-regular partition on \(V\). Such a partition exists by <a href="https://en.wikipedia.org/wiki/Szemer%C3%A9di_regularity_lemma">Szemerédi’s regularity lemma</a>. Edges which satisfy one of 3 conditions, to be enumerated soon, will be removed. Then it’s argued that at most \(\epsilon n^2\) edges were removed and there are still at least \(\delta n^3\) triangles in the graph.</p>
 
-<p>Remove edge <script type="math/tex">(u,v)</script> from <script type="math/tex">G</script> if:</p>
+<p>Remove edge \((u,v)\) from \(G\) if:</p>
 
 <ol>
   <li>
-    <p><script type="math/tex">(u,v) \in V_i \times V_j</script> where <script type="math/tex">(V_i,V_j)</script> is not an <script type="math/tex">\frac{\epsilon}{4}</script>-pseudo-random pair. Remember our definition for <script type="math/tex">\epsilon</script>-regular partitions allowed a few of the pairs to not have its edges uniformly distributed throughout the partition. So all edges between such pairs are removed.</p>
+    <p>\((u,v) \in V_i \times V_j\) where \((V_i,V_j)\) is not an \(\frac{\epsilon}{4}\)-pseudo-random pair. Remember our definition for \(\epsilon\)-regular partitions allowed a few of the pairs to not have its edges uniformly distributed throughout the partition. So all edges between such pairs are removed.</p>
   </li>
   <li>
-    <p><script type="math/tex">(u,v) \in V_i \times V_j</script> where <script type="math/tex">% <![CDATA[
-d(V_i,V_j) < \frac{\epsilon}{2} %]]></script>. This condition states to remove all edges between pairs in the partition which didn’t have many edges between them to begin with.</p>
+    <p>\((u,v) \in V_i \times V_j\) where \(d(V_i,V_j) &lt; \frac{\epsilon}{2}\). This condition states to remove all edges between pairs in the partition which didn’t have many edges between them to begin with.</p>
   </li>
   <li>
-    <p><script type="math/tex">v \in V_i</script> where <script type="math/tex">\mid V_i \mid \leq \frac{\epsilon}{4k}n</script>. Any partitions that are small are removed. Thus obviously any edges with adjacencies in this partition are removed.</p>
+    <p>\(v \in V_i\) where \(\mid V_i \mid \leq \frac{\epsilon}{4k}n\). Any partitions that are small are removed. Thus obviously any edges with adjacencies in this partition are removed.</p>
   </li>
 </ol>
 
-<p>At most, <script type="math/tex">\frac{\epsilon}{4} k^2</script> pairs from the partition were not <script type="math/tex">\frac{\epsilon}{4}</script>-pseudo-random. Denote the set of such pairs by <script type="math/tex">I</script>. As the partition is close to an equi-partition, for all <script type="math/tex">i \in [ k ]</script>, <script type="math/tex">\mid V_i \mid \leq \lfloor \frac{n}{k}\rfloor +1</script>.
-Thus from condition 1, at most <script type="math/tex">\sum\limits_{(i,j) \in I} \mid V_i\mid\cdot \mid V_j\mid \leq \frac{\epsilon}{4} k^2 \cdot \frac{n^2}{k^2} = \frac{\epsilon}{4}n^2</script> edges are removed.</p>
+<p>At most, \(\frac{\epsilon}{4} k^2\) pairs from the partition were not \(\frac{\epsilon}{4}\)-pseudo-random. Denote the set of such pairs by \(I\). As the partition is close to an equi-partition, for all \(i \in [ k ]\), \(\mid V_i \mid \leq \lfloor \frac{n}{k}\rfloor +1\).
+Thus from condition 1, at most \(\sum\limits_{(i,j) \in I} \mid V_i\mid\cdot \mid V_j\mid \leq \frac{\epsilon}{4} k^2 \cdot \frac{n^2}{k^2} = \frac{\epsilon}{4}n^2\) edges are removed.</p>
 
-<p>The number of edges in a simple graph on <script type="math/tex">n</script> vertices is <script type="math/tex">% <![CDATA[
-<n^2 %]]></script>. When edges are removed between pairs of partitions that have low density, specifically density <script type="math/tex">% <![CDATA[
-<\frac{\epsilon}{2} %]]></script>, at most  <script type="math/tex">\frac{\epsilon}{2} \cdot n^2</script> edges are removed.</p>
+<p>The number of edges in a simple graph on \(n\) vertices is \(&lt;n^2\). When edges are removed between pairs of partitions that have low density, specifically density \(&lt;\frac{\epsilon}{2}\), at most  \(\frac{\epsilon}{2} \cdot n^2\) edges are removed.</p>
 
-<p>If a partition has <script type="math/tex">% <![CDATA[
-<\frac{\epsilon}{4k}n %]]></script> vertices, then it contributes <script type="math/tex">% <![CDATA[
-<\frac{\epsilon}{4k}n^2 %]]></script> edges. As there are <script type="math/tex">k</script> parts, this implies <script type="math/tex">% <![CDATA[
-<k \cdot \frac{\epsilon}{4k}n^2= \frac{\epsilon}{4}n^2 %]]></script> edges are removed when the vertices from those partitions are deleted. In total, the 3 conditions for edge removal deleted only at most <script type="math/tex">\epsilon \cdot n^2</script> edges. Thus the graph still contains a triangle.</p>
+<p>If a partition has \(&lt;\frac{\epsilon}{4k}n\) vertices, then it contributes \(&lt;\frac{\epsilon}{4k}n^2\) edges. As there are \(k\) parts, this implies \(&lt;k \cdot \frac{\epsilon}{4k}n^2= \frac{\epsilon}{4}n^2\) edges are removed when the vertices from those partitions are deleted. In total, the 3 conditions for edge removal deleted only at most \(\epsilon \cdot n^2\) edges. Thus the graph still contains a triangle.</p>
 
 <p>It remains to show how many triangles are left in the graph after removing edges.
-Fix a triangle that remains in the graph, and label the vertices of the triangle <script type="math/tex">a,b,c</script>. WLOG suppose that <script type="math/tex">a \in V_1</script>, <script type="math/tex">b \in V_2</script>, <script type="math/tex">c \in V_3</script>. As these three edges were not removed, <script type="math/tex">(V_1,V_2)</script>, <script type="math/tex">(V_2,V_3)</script>, and <script type="math/tex">(V_1,V_3)</script> are <script type="math/tex">\frac{\epsilon}{4}</script>-regular pairs with density <script type="math/tex">\geq \frac{\epsilon}{2}</script>. Lastly, <script type="math/tex">\mid V_i \mid >\frac{\epsilon}{4k}n</script> for <script type="math/tex">i=1,2,3</script>.</p>
+Fix a triangle that remains in the graph, and label the vertices of the triangle \(a,b,c\). WLOG suppose that \(a \in V_1\), \(b \in V_2\), \(c \in V_3\). As these three edges were not removed, \((V_1,V_2)\), \((V_2,V_3)\), and \((V_1,V_3)\) are \(\frac{\epsilon}{4}\)-regular pairs with density \(\geq \frac{\epsilon}{2}\). Lastly, \(\mid V_i \mid &gt;\frac{\epsilon}{4k}n\) for \(i=1,2,3\).</p>
 
-<p>Next, it’s necessary to show that the number of vertices which have at least <script type="math/tex">\frac{\epsilon n}{4k}</script> adjacencies in both <script type="math/tex">V_2</script> and <script type="math/tex">V_3</script> is at least <script type="math/tex">\frac{n}{2k}</script>. Assume for sake of contradiction that there is a subset <script type="math/tex">X \subset V_1</script> where <script type="math/tex">\mid X \mid \geq \frac{\epsilon n}{4k}</script> and every <script type="math/tex">x \in X</script>, has <script type="math/tex">% <![CDATA[
-< \frac{\epsilon n}{4k} %]]></script> adjacencies in <script type="math/tex">V_2</script>. Then checking the density between <script type="math/tex">X</script> and <script type="math/tex">V_2</script>, <script type="math/tex">% <![CDATA[
-d(X,V_2) < \frac{\mid X \mid \frac{\epsilon n}{4k}}{ \mid X \mid \mid V_2 \mid} = \frac{\epsilon}{4} %]]></script>, which breaks the assumptions that <script type="math/tex">(V_1,V_2)</script> are <script type="math/tex">\frac{\epsilon}{4}</script>-regular pairs. The same applies for <script type="math/tex">V_3</script>, and the number of vertices which have <script type="math/tex">% <![CDATA[
-< \frac{\epsilon n}{4k} %]]></script> adjacencies in either <script type="math/tex">V_2</script> or <script type="math/tex">V_3</script> is</p>
+<p>Next, it’s necessary to show that the number of vertices which have at least \(\frac{\epsilon n}{4k}\) adjacencies in both \(V_2\) and \(V_3\) is at least \(\frac{n}{2k}\). Assume for sake of contradiction that there is a subset \(X \subset V_1\) where \(\mid X \mid \geq \frac{\epsilon n}{4k}\) and every \(x \in X\), has \(&lt; \frac{\epsilon n}{4k}\) adjacencies in \(V_2\). Then checking the density between \(X\) and \(V_2\), \(d(X,V_2) &lt; \frac{\mid X \mid \frac{\epsilon n}{4k}}{ \mid X \mid \mid V_2 \mid} = \frac{\epsilon}{4}\), which breaks the assumptions that \((V_1,V_2)\) are \(\frac{\epsilon}{4}\)-regular pairs. The same applies for \(V_3\), and the number of vertices which have \(&lt; \frac{\epsilon n}{4k}\) adjacencies in either \(V_2\) or \(V_3\) is</p>
 
-<script type="math/tex; mode=display">\begin{align*}
-\frac{n}{k}(1-2 \cdot \frac{\epsilon}{4}) > \frac{n}{2k}.
-\end{align*}</script>
+\[\begin{align*}
+\frac{n}{k}(1-2 \cdot \frac{\epsilon}{4}) &gt; \frac{n}{2k}.
+\end{align*}\]
 
-<p>Thus there are at least <script type="math/tex">\frac{n}{2k}</script> vertices in <script type="math/tex">V_1</script> with at least <script type="math/tex">\frac{\epsilon n}{4k}</script> adjacent vertices to both <script type="math/tex">V_2</script> and <script type="math/tex">V_3</script>. For such an <script type="math/tex">a \in V_1</script>, let <script type="math/tex">W_2,W_3</script> be subsets of <script type="math/tex">V_2</script> and <script type="math/tex">V_3</script> respectively which are adjacent to <script type="math/tex">a</script>. As <script type="math/tex">(V_2,V_3)</script> is <script type="math/tex">\frac{\epsilon}{4}</script> regular,</p>
+<p>Thus there are at least \(\frac{n}{2k}\) vertices in \(V_1\) with at least \(\frac{\epsilon n}{4k}\) adjacent vertices to both \(V_2\) and \(V_3\). For such an \(a \in V_1\), let \(W_2,W_3\) be subsets of \(V_2\) and \(V_3\) respectively which are adjacent to \(a\). As \((V_2,V_3)\) is \(\frac{\epsilon}{4}\) regular,</p>
 
-<script type="math/tex; mode=display">\begin{align*}
+\[\begin{align*}
 \mid e(W_2,W_3)\mid \geq \frac{\epsilon}{4} |W_2||W_3| \geq \frac{\epsilon}{4} \cdot  \left (\frac{\epsilon  n}{4 k} \right)^2 = \frac{\epsilon^3 \cdot n^2}{64k^2}
-\end{align*}</script>
+\end{align*}\]
 
-<p>Every edge between <script type="math/tex">W_2</script> and <script type="math/tex">W_3</script> forms a unique triangle. This was for an arbitrary <script type="math/tex">a \in V_1</script>, so summing over all vertices in <script type="math/tex">V_1</script>, the number of triangles is at least</p>
+<p>Every edge between \(W_2\) and \(W_3\) forms a unique triangle. This was for an arbitrary \(a \in V_1\), so summing over all vertices in \(V_1\), the number of triangles is at least</p>
 
-<script type="math/tex; mode=display">\begin{align*}
+\[\begin{align*}
 \sum\limits_{i=1}^{\frac{n}{2k}} \frac{\epsilon^3 \cdot n^2}{64k^2}=
 \frac{\epsilon^3 \cdot n^2}{64k^2} \cdot \frac{ n}{2 k} = \delta n^3, \text{ for } \delta = \frac{\epsilon^3}{128k^3}.
-\end{align*}</script>
+\end{align*}\]
 
 <h3 id="what-just-happened">What just happened?</h3>
 

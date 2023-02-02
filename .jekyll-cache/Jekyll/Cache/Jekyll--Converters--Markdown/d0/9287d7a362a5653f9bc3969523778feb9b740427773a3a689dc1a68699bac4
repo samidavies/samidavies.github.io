@@ -1,4 +1,4 @@
-I"�)<h3 id="major-disclaimer">Major disclaimer</h3>
+I"�(<h3 id="major-disclaimer">Major disclaimer</h3>
 <p>This is a post about some of the history behind the solvability of a few common games.</p>
 
 <p><img src="/assets/major_buzzkill.gif" alt="major_buzzkill" /></p>
@@ -57,8 +57,8 @@ theory, a player demonstrates <strong>perfect play</strong> when they play the g
 the set of board outcomes. For example, figure 1 is a reflection of
 figure 2 and figure 3 is a rotation of figure 2, so we wish to consider all three
 of those boards the same.  After considering and discounting board symmetries and
-assuming <script type="math/tex">X</script> plays first, there are exactly 91 winning board positions for <script type="math/tex">X</script>, 44
-winning board positions for <script type="math/tex">O</script>, and 3 board positions that are considered a draw. The total possible positions in tic-tac-toe is 765. This number is interesting to keep in mind because it’s significantly smaller than the total possible positions in other games we’ll look at later.</p>
+assuming \(X\) plays first, there are exactly 91 winning board positions for \(X\), 44
+winning board positions for \(O\), and 3 board positions that are considered a draw. The total possible positions in tic-tac-toe is 765. This number is interesting to keep in mind because it’s significantly smaller than the total possible positions in other games we’ll look at later.</p>
 
 <p><img src="/assets/rotations.png" alt="rotations" /></p>
 
@@ -96,7 +96,7 @@ exists.</p>
 <h3 id="connect-4">Connect 4</h3>
 
 <p>What’s interesting about the strategy behind tic-tac-toe is how it relates to more
-complex strongly solved games, like Connect 4. There are approximately <script type="math/tex">10^{13}</script> possible positions in Connect 4, which is significantly larger than the 765 possible positions in tic-tac-toe. Connect 4 was first solved mathematically in 1988 by James Allen.</p>
+complex strongly solved games, like Connect 4. There are approximately \(10^{13}\) possible positions in Connect 4, which is significantly larger than the 765 possible positions in tic-tac-toe. Connect 4 was first solved mathematically in 1988 by James Allen.</p>
 
 <p>Also in 1988, Victor Allis proved that if both players behave optimally in a game of Connect 4, the first player can always win if she starts in the middle column, and can at least draw if she starts in a column other than the middle column. I decided to look at Victor Allis’s method of solving Connect 4 because it’s similar to how tic-tac-toe is solved. Victor Allis developed 9 strategic rules to optimally play Connect 4. These rules can only be applied by the player who guides the game so that she controls which squares each player will mark (this is called <strong>controlling the zugzwang</strong>). Based on the description of the board, one of the rules is applied by a simple search of the board for which rule is applicable where. The rules focus on how to gain control of certain areas of the board.</p>
 
@@ -108,11 +108,11 @@ complex strongly solved games, like Connect 4. There are approximately <script t
 
 <p>The solvability of chess and checkers are  semi-interesting computationally and pretty boring mathematically. However, it’s helpful to consider them in order to understand why they are so difficult to solve. Both of these games have an immensely larger number of unique ways to be played as compared to Connect 4 or tic-tac-toe.</p>
 
-<p>Currently, checkers is weakly solved and chess is partially solved. Checkers is categorized as weakly solved because from the standard starting position, when both players utilize perfect play, they will achieve a draw. Checkers was solved by Jonathon Schaeffer in 2007, almost 20 years after Allis solved Connect 4. To date, checkers is the solved game with the largest number of possible solutions to win, approximately <script type="math/tex">5 \times 10^{20}</script> unique ways. It’s the most complicated game solved, with a total of <script type="math/tex">10^{14}</script> total computations performed over the span of 18 years (I think. There’s very likely something new I don’t know about. This was true in fall 2012.).</p>
+<p>Currently, checkers is weakly solved and chess is partially solved. Checkers is categorized as weakly solved because from the standard starting position, when both players utilize perfect play, they will achieve a draw. Checkers was solved by Jonathon Schaeffer in 2007, almost 20 years after Allis solved Connect 4. To date, checkers is the solved game with the largest number of possible solutions to win, approximately \(5 \times 10^{20}\) unique ways. It’s the most complicated game solved, with a total of \(10^{14}\) total computations performed over the span of 18 years (I think. There’s very likely something new I don’t know about. This was true in fall 2012.).</p>
 
 <p><img src="/assets/chess.gif" alt="connect-4" /></p>
 
-<p>It’s widely accepted that chess is not even possible to solve until a breakthrough in computing occurs, as there are an estimated <script type="math/tex">10^{45}</script> unique ways to win chess. Chess is partially solved because its endgame can be solved with perfect play once there are less than 6 pieces left on the board.</p>
+<p>It’s widely accepted that chess is not even possible to solve until a breakthrough in computing occurs, as there are an estimated \(10^{45}\) unique ways to win chess. Chess is partially solved because its endgame can be solved with perfect play once there are less than 6 pieces left on the board.</p>
 
 <h3 id="subset-take-away">Subset take-away</h3>
 
