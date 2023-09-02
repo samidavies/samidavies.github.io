@@ -3,7 +3,7 @@ layout: post
 title:  newpapers
 date:   2023-01-30
 categories: post
-news: true
+news: false
 ---
 Finished two papers in the past couple of months that are available now! 
 The first uses learned predictions to improve the run-time of [Ford-Fulkerson methods](\assets/LA_max_flow-arxiv.pdf), both theoretically and empirically.
