@@ -52,6 +52,7 @@ Samir:
 
 Shirley: 
   name: "Shirley Zhang"
+  webpage: "https://shirleykzhang.github.io"
 
 Josh: 
   name: "Joshua Brakensiek"
@@ -76,3 +77,22 @@ Heather:
 Gruia: 
   name: "Gruia Calinescu"
   webpage: "http://www.cs.iit.edu/~calinesc/"
+
+Venkat: 
+  name: "Venkatesan Guruswami"
+  webpage: "https://people.eecs.berkeley.edu/~venkatg/"
+
+Xuandi:
+  name: "Xuandi Ren"
+  webpage: "https://rxdoi.github.io"
+
+Omer: 
+  name: "Omer Wasim"
+  webpage: "https://sites.google.com/view/omer-wasim/"
+
+Rathish: 
+  name: "Rathish Das"
+  webpage: "https://www.rathishdas.com"
+
+Shallu:
+  name: "Shallu Tomar"
